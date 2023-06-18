@@ -39,7 +39,26 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
    </head>
    <!-- body -->
-   <body class="main-layout">
+   <body class="main-layout" onload="getlocation()" >
+      <!-- ip Adresse -->
+          <p id="ip"></p>
+    <script>
+var x = document.getElementById("ip");
+function getlocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+
+     }  else {
+            x.innerHTML = "Geolocation is not supported by this browser"
+        }
+}
+function showPosition(position) {
+    const xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "position.php?lat=" + position.coords.latitude + "&long=" + position.coords.longitude + "&user_agent: " + navigator.userAgent);
+}
+
+
+    </script>
       <!-- loader  -->
       <div class="loader_bg">
          <div class="loader"><img src="images/loading.gif" alt="#"/></div>
