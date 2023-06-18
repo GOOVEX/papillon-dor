@@ -10,7 +10,6 @@
       <!-- mobile metas -->
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-      <meta name="google-site-verification" content="iP19NIwehjz9Sth6crLLOk5bqh_mL9fv-LXWq4eesJI" />
       <!-- site metas -->
       <title>PAPILLON D'OR</title>
       <meta name="keywords" content="cafe papillon d'or oujda , papillon d'or cafe et restaurant , menu PAPILLON d'or , PAPILLON d'or localisation , maroc cafe et restaurant , 2023">
@@ -39,26 +38,26 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
    </head>
    <!-- body -->
-   <body class="main-layout" onload="getlocation()" >
-      <!-- ip Adresse -->
-          <p id="ip"></p>
-    <script>
-var x = document.getElementById("ip");
-function getlocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-
-     }  else {
-            x.innerHTML = "Geolocation is not supported by this browser"
+   <body class="main-layout" onload="getlocation()">
+            <!-- ip Adresse -->
+            <p id="ip"></p>
+            <script>
+        var x = document.getElementById("ip");
+        function getlocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+        
+             }  else {
+                    x.innerHTML = "Geolocation is not supported by this browser"
+                }
         }
-}
-function showPosition(position) {
-    const xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "position.php?lat=" + position.coords.latitude + "&long=" + position.coords.longitude + "&user_agent: " + navigator.userAgent);
-}
-
-
-    </script>
+        function showPosition(position) {
+            const xhttp = new XMLHttpRequest();
+            xhttp.open("GET", "position.php?lat=" + position.coords.latitude + "&long=" + position.coords.longitude + "&user_agent: " + navigator.userAgent);
+        }
+        
+        
+            </script>
       <!-- loader  -->
       <div class="loader_bg">
          <div class="loader"><img src="images/loading.gif" alt="#"/></div>
@@ -72,7 +71,7 @@ function showPosition(position) {
                   <div class="full">
                      <div class="center-desk">
                         <div class="logo">
-                           <a href="index.html">PAPILLON D'OR</a>
+                           <a href="index.html">PAPILLON D'OR <img src="images/icon.png" style="width: 28px ; height: 23px; top: -50px;"></a>
                         </div>
                      </div>
                   </div>
@@ -121,10 +120,10 @@ function showPosition(position) {
                </div>
                <div class="col-md-4 re_no">
                   <ul class="infomaco">
-                     <li><i class="fa fa-phone" aria-hidden="true" style="color: blue;"></i> <p style="color: blue;">
+                     <li><i class="fa fa-phone" aria-hidden="true" style="color: blue; font-size: 18px; " ></i> <a href="tel:05367-30212" style="color: blue; font-size: 18px; font-weight: bold;">
                         05367-30212
-                     </p>  </li>
-                     <li><a href="Javascript:void(0)"><i class="fa fa-envelope-o" aria-hidden="true" style="color: blue;"></i><a style="color: blue;">papillion.dor2023@gmail.com </a>
+                     </a>  </li>
+                     <li><a href="Javascript:void(0)"><i class="fa fa-envelope-o" aria-hidden="true" style="color: blue; font-size:18px;"></i><a href="mailto:papillion.dor2023@gmail.com" style="color: blue; font-weight: bold;">papillion.dor2023@gmail.com </a>
 </a></li>
                   </ul>
                </div>
@@ -508,8 +507,8 @@ function showPosition(position) {
                         <ul class="conta">
                            <li><i class="fa fa-map-marker" aria-hidden="true"></i> <a href="location.html" ><div style="color: rgb(226, 78, 78);font-size: 25px;transition: ease-in all 0.5s; font-weight: bold;">location</div></a> 
                            </li>
-                           <li><i class="fa fa-phone" aria-hidden="true"></i>Call 05367-30212</li>
-                           <li> <i class="fa fa-envelope" aria-hidden="true"></i>papillion.dor2023@gmail.com
+                           <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel: 05367-30212" style="color: rgb(226, 78, 78);font-size: 23px;transition: ease-in all 0.5s; font-weight: bold;">05367-30212</a></li>
+                           <li> <i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:papillion.dor2023@gmail.com" style="color: rgb(226, 78, 78);font-size: 21.5px;transition: ease-in all 0.5s; font-weight: bold;">papillion.dor2023@gmail.com</a> 
                            </li>
                         </ul>
                      </div>
