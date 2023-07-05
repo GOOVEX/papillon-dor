@@ -644,6 +644,7 @@ ul.infomaco li a {
      background: #fff;
      padding: 50px;
      border-radius: 10px;
+     height: 300px;
 }
 .ser_img1 {
      background: #fff;
@@ -677,6 +678,10 @@ ul.infomaco li a {
      transform: scale(1) !important;
 }
 
+.owl-item.active.center .contact-txt {
+     color: yellow;
+}
+
 .owl-item.active.center .ser_img {
      background: yellow;
 }
@@ -702,8 +707,8 @@ ul.infomaco li a {
 
 .owl-nav.disabled .owl-prev,
 .owl-nav.disabled .owl-next {
-     width: 89px;
-     height: 89px;
+     width: 65px;
+     height: 65px;
      background-color: yellow !important;
      color:blue !important ;
      font-size: 60px !important;
@@ -715,7 +720,46 @@ ul.infomaco li a {
      margin: 0 auto;
      display: block;
 }
+/** location Popup **/
+.blur-container#blur.active {
+     filter: blur(20px);
+     pointer-events: none;
+     user-select: none;
+}
+.blur-container1#blur.active {
+     pointer-events: none;
+     user-select: none;
+}
 
+#Popup {
+     position: fixed;
+     top: 40%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+     width: 80%;
+     padding: 50px;
+     box-shadow: 0 5px 30px rgba(0,0,0,.30);
+     background: #fff;
+     visibility: hidden;
+     opacity: 0;
+     transition: 0.5 ;
+}
+#Popup.active {
+     top: 50%;
+     visibility: visible;
+     opacity: 1;
+     transition: 0.5s;
+}
+.close {
+     position: relative;
+     padding: 5px 20px;
+     display: inline-block;
+     margin-top: 20px;
+     text-decoration: none;
+     color: #fff;
+     background: #000;
+}
+/** end location Popup **/
 
 /** end service **/
 
@@ -729,6 +773,8 @@ ul.infomaco li a {
      border: #fff solid 20px;
      border-bottom: inherit !important;
      border-left: inherit !important;
+
+     
 }
 
 
@@ -752,6 +798,7 @@ ul.infomaco li a {
 
 .testimonial {
      padding-left: 20px;
+
 }
 
 .testimonial .titlepage {
@@ -906,15 +953,15 @@ ul.infomaco li a {
 }
 
 .logo_bottom {
+     border-bottom: white solid 1px;
      text-align: center;
      color: yellow !important;
      font-size: 30px;
      text-transform: uppercase;
      font-weight: bold;
      line-height: 50px;
-     height: 50px !important;
+     height: 60px !important;
      display: block;
-     margin-bottom: 60px;
 }
 
 .form_subscri {
@@ -1008,7 +1055,7 @@ ul.social_icon li a:hover {
 }
 
 ul.conta {
-     padding-top: 30px;
+     padding-top: 10px;
 }
 
 ul.conta li {
